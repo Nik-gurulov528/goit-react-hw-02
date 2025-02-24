@@ -1,0 +1,4 @@
+.collectionOfButtons {
+  display: flex;
+  gap: 8px;
+}
