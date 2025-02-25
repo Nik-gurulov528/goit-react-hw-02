@@ -25,7 +25,7 @@ function App() {
     dataFeedback.good + dataFeedback.neutral + dataFeedback.bad;
 
   const procentOfPositive = Math.round(
-    (dataFeedback.good / (totalFeedback - dataFeedback.neutral)) * 100
+    (dataFeedback.good / totalFeedback) * 100
   );
 
   const updateFeedback = feedbackType => {
@@ -36,7 +36,6 @@ function App() {
   };
   const resetFeedback = () => {
     setFeedback({
-      ...dataFeedback,
       good: (dataFeedback.good = 0),
       neutral: (dataFeedback.neutral = 0),
       bad: (dataFeedback.bad = 0),
